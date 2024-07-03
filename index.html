@@ -3,6 +3,7 @@
   <head>
     <title>InvOrd</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./resource/scripts/index.js" type="module" defer ></script>
     <link rel="stylesheet" href="./resource/css/mobile.css">
   </head>
   <body>
@@ -19,7 +20,7 @@
                 <!-- heading for form  -->
                 <div class="aside-sub-container">
                     <h2 class="form-head">Add New Product</h2>
-                    <form action="" class="form-container">
+                    <form id="form" class="form-container">
                         <label for="product_name" class="input-label">
                             Product name:
                             <input type="text" name="product_name" placeholder="Name" id="product_name" class="input-field">
@@ -34,111 +35,58 @@
                         </label>
                         <label for="category"class="input-label">
                             Category
-                            <select name="category" id="category"class="input-field dropdown" >
-                                <option value="" disabled selected hidden></option>
-                                <option value="mobile">Mobile</option>
-                                <option value="fruits">Fruits</option>
-                                <option value="fashion">Fashion</option>
-                                <option value="electronics">Electronics</option>
+                            <select name="category" id="category"class="input-field" >
+                                <option class="dropdown-option" ="" disabled selected hidden></option>
+                                <option class="dropdown-option" ="mobile">Mobile</option>
+                                <option class="dropdown-option" ="fruits">Fruits</option>
+                                <option class="dropdown-option" ="fashion">Fashion</option>
+                                <option class="dropdown-option" ="electronics">Electronics</option>
                             </select>
                         </label>
                         <div class="input-label">
-                            <input type="button" value="Add product" class="input-field btn">
+                            <input type="submit" value="Add product" class="input-field btn">
                         </div>
                     </form>
                 </div>
             </aside>
-            <section class="section-ele">
-                <div class="section-header">
+            <section class="section-ele-1">
+                <div class="section-header-1">
                     <h2>Product List</h2>
                 </div>
-                <div class="section-content">
-                    <div class="product-container">
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-img">
-                                <img src="https://ik.imagekit.io/gokul/PartyEvent/party01.jpg" alt="product">
-                            </div>
-                            <div class="product-details">
-                                <span class="product-catagory">category</span>
-                                <h4><a href="">Product name</a></h4>
-                                <div class="product-bottom-details">
-                                    <div class="product-price"><small>Rs.450</small>Rs.399</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="section-header-1">
+                    <p>Availablitity</p>
+                    <div class="filter">
+                        <form action="">
+                            <label for="all">
+                                All
+                                <input type="radio" name="filter" id="all" checked value="all">
+                            </label>
+                            <label for="in-stock">
+                                In stock
+                                <input type="radio" name="filter" id="in-stock" value="in-stock">
+                            </label>
+                            <label for="no-stock">
+                                Out of stock
+                                <input type="radio" name="filter" id="no-stock" value="no-stock">
+                            </label>
+                        </form>
                     </div>
+                </div>
+                <div class="section-content-1">
+                    <div class="product-container" id="product-container">
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="section-ele-2">
+                <div class="cart-header-2">
+                    <h2>Cart</h2>
+                </div>
+                <div class="section-content-2" id="cart-content">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div id="checkout-section" style="display: none;">
+                    <button id="checkout-button" class="input-field btn">Checkout</button>
                 </div>
             </section>
         </div>
